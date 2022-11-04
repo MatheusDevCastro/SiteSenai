@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> SIRI CASCUDO </title>
+        <link rel="stylesheet" href="./styles.css">
+        <link rel="stylesheet" href="./styleCad.css">
+        
+
+    </head>
+    <body>
+        <nav>
+            <div href="index.html" class="logo">
+                <h1 href="index.html"> SIRI CASCUDO </h1>
+            </div>
+
+            <button onclick="abrirMenu()">&#9776;</button>
+
+            <ul id="botoesMenu">
+                <a href="./index.html">
+                    <li>
+                        <p> HOME </p>
+                    </li>
+                </a>
+                <a href="cardapio.html">
+                    <li>
+                        <p> CARDÁPIO </p>
+                    </li>
+                </a>
+                <a href="sobre.html">
+                    <li>
+                        <p> SOBRE NÓS </p>
+                    </li>
+                </a>
+                <a href="contato.html">
+                    <li>
+                        <p> FALE CONOSCO </p>
+                    </li>
+                </a>
+            </ul>
+
+        </nav>
+
+        <div class="content" id="card"> 
+            <div class="height-nav"></div>
+            <div id="cardap">
+                <ul class="cardapio">
+
+                    <li>
+
+                        <h2> Camaron Burguer </h2>
+                        <img src="./img/hb1_resized.jpg" class="img_cardapio">
+                        <p class="item_preco">R$40,00</p>
+
+                    </li>
+
+                    <li>
+
+                        <h2> Combo Hamburgue de Siri </h2>
+                        <img src="./img/hb2_resized.jpg" class="img_cardapio">
+                        <p class="item_preco">R$65,00</p>
+
+                    </li>
+
+                    <li>
+
+                        <h2> Lula Molusco Burguer </h2>
+                        <img src="./img/Hb3_resized.jpg" class="img_cardapio">
+                        <p class="item_preco">R$45,00</p>
+
+                    </li>
+
+                    
+
+                </ul>
+
+            </div>
+        </div>
+      
+
+        <script>
+            const arrayHeight = document.getElementsByClassName('height-nav');
+            const navHeight = document.getElementsByTagName('nav')[0].clientHeight;
+
+            for (let navHeightObj of arrayHeight)
+                navHeightObj.style.height = navHeight + 'px';
+
+            function abrirMenu() {
+                const botoesMenu = document.getElementById('botoesMenu');
+
+                botoesMenu.className = botoesMenu.className.includes('responsivo') ? '' : 'responsivo'
+            }
+        </script>
+
+    </body>
+</html>

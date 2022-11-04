@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> SIRI CASCUDO </title>
+        <link rel="stylesheet" href="./styles.css">
+        <link rel="stylesheet" href="./styleSob.css">
+        
+
+    </head>
+    <body>
+        <nav>
+            <div href="index.html" class="logo">
+                <h1 href="index.html"> SIRI CASCUDO </h1>
+            </div>
+
+            <button onclick="abrirMenu()">&#9776;</button>
+
+            <ul id="botoesMenu">
+                <a href="./index.html">
+                    <li>
+                        <p> HOME </p>
+                    </li>
+                </a>
+                <a href="cardapio.html">
+                    <li>
+                        <p> CARDÁPIO </p>
+                    </li>
+                </a>
+                <a href="sobre.html">
+                    <li>
+                        <p> SOBRE NÓS </p>
+                    </li>
+                </a>
+                <a href="contato.html">
+                    <li>
+                        <p> FALE CONOSCO </p>
+                    </li>
+                </a>
+    
+            </ul>
+
+        </nav>
+
+        <div class="content" id="perfil"> 
+            <div class="height-nav"></div>
+            <div id="mapa">
+                <iframe id ="mapa-google" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31846.778005755263!2d-32.444472149253905!3d-3.842948751898155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x63652666d497a3d%3A0x83f652bfda978b15!2sFernando%20de%20Noronha%20-%20PE!5e0!3m2!1spt-BR!2sbr!4v1663287087765!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div id="video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/46h0jqfYuaE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            
+        </div>
+      
+
+        <script>
+            const arrayHeight = document.getElementsByClassName('height-nav');
+            const navHeight = document.getElementsByTagName('nav')[0].clientHeight;
+
+            for (let navHeightObj of arrayHeight)
+                navHeightObj.style.height = navHeight + 'px';
+
+            function abrirMenu() {
+                const botoesMenu = document.getElementById('botoesMenu');
+
+                botoesMenu.className = botoesMenu.className.includes('responsivo') ? '' : 'responsivo'
+            }
+        </script>
+
+    </body>
+</html>

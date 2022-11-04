@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> SIRI CASCUDO </title>
+        <link rel="stylesheet" href="./styles.css">
+        <link rel="stylesheet" href="./styleCont.css">
+        
+
+    </head>
+    <body>
+        <nav>
+            <div href="index.html" class="logo">
+                <h1 href="index.html"> SIRI CASCUDO </h1>
+            </div>
+
+            <button onclick="abrirMenu()">&#9776;</button>
+
+            <ul id="botoesMenu">
+                <a href="./index.html">
+                    <li>
+                        <p> HOME </p>
+                    </li>
+                </a>
+                <a href="cardapio.html">
+                    <li>
+                        <p> CARDÁPIO </p>
+                    </li>
+                </a>
+                <a href="sobre.html">
+                    <li>
+                        <p> SOBRE NÓS </p>
+                    </li>
+                </a>
+                <a href="contato.html">
+                    <li>
+                        <p> FALE CONOSCO </p>
+                    </li>
+                </a>
+            </ul>
+
+        </nav>
+
+        <div class="content" id="perfil"> 
+            <div class="height-nav"></div>
+
+            <div class="box">
+                <form action="">
+                    <fieldset>
+                        <legend><b>Fórmulário de Clientes</b></legend>
+                        <br>
+                        <div class="inputBox">
+                            <input type="text" name="nome" id="nome" class="inputUser" required>
+                            <label for="nome" class="labelInput">Nome completo</label>
+                        </div>
+                        <br><br>
+                        <div class="inputBox">
+                            <input type="text" name="email" id="email" class="inputUser" required>
+                            <label for="email" class="labelInput">Email</label>
+                        </div>
+                        <br><br>
+                        <div class="inputBox">
+                            <input type="tel" name="telefone" id="telefone" class="inputUser" required>
+                            <label for="telefone" class="labelInput">Telefone</label>
+                        </div>
+                        <br><br>
+                        <label for="data_nascimento"><b>Data de Nascimento:</b></label>
+                        <input type="date" name="data_nascimento" id="data_nascimento" required>
+                        <br><br><br>
+                        <div class="inputBox">
+                            <input type="text" name="cidade" id="cidade" class="inputUser" required>
+                            <label for="cidade" class="labelInput">Cidade</label>
+                        </div>
+                        <br><br>
+                        <div class="inputBox">
+                            <input type="text" name="estado" id="estado" class="inputUser" required>
+                            <label for="estado" class="labelInput">Estado</label>
+                        </div>
+                        <br><br>
+                        <div class="inputBox">
+                            <input type="text" name="endereco" id="endereco" class="inputUser" required>
+                            <label for="endereco" class="labelInput">Endereço</label>
+                        </div>
+                        <br><br>
+                        <div class="inputBox">
+                            <textarea style="resize: vertical" type="text" name="comentario" id="comentario" class="inputUser" required></textarea>
+                            <label for="comentario" class="labelInput">Comentário</label>
+                        </div>
+                        
+                        <br><br>
+                        <input type="submit" name="submit" id="submit">
+                    </fieldset>
+                </form>
+
+        </div>
+      
+
+        <script>
+            const arrayHeight = document.getElementsByClassName('height-nav');
+            const navHeight = document.getElementsByTagName('nav')[0].clientHeight;
+
+            for (let navHeightObj of arrayHeight)
+                navHeightObj.style.height = navHeight + 'px';
+
+            function abrirMenu() {
+                const botoesMenu = document.getElementById('botoesMenu');
+
+                botoesMenu.className = botoesMenu.className.includes('responsivo') ? '' : 'responsivo'
+            }
+        </script>
+
+    </body>
+</html>
